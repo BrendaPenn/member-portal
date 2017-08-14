@@ -30,6 +30,9 @@ gem 'carrierwave', '~> 1.2.1'
 # gem 'capistrano-rails', group: :development
 gem 'mini_magick', '= 4.8.0'
 
+# Algolia - SaaS Searchss
+gem 'algoliasearch-rails', '~> 1.14.0'
+
 group :development, :test do
   gem 'bundler-audit', '~> 0.6.0'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

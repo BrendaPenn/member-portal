@@ -37,3 +37,15 @@ Many editors also have plugins for running Rubocop and helping you to stay withi
 * [Atom](https://atom.io/packages/linter-rubocop)
 * [Sublime Text](https://github.com/SublimeLinter/SublimeLinter-rubocop)
 * [VS Code](https://github.com/misogi/vscode-ruby-rubocop)
+
+## Advanced Search with Algolia
+
+Search for members defaults to basic search using SQL LIKE.  To use Algolia for advanced searching:
+
+* Create an account on [Algolia](https://www.algolia.com)
+* On Algolia dashboard, note your application_id and api_key
+* In local repo, create a .env.local file and update with your Algolia credentials.  Format for this can be copied from .env
+* In developer.rb environment file, change `config.algolia_search = true`
+* Restart rails
+* New members will be added to the Algolia index.
+* Existing members can be added to Algolia index as well.  See [Rails Algolia Search Gem](https://github.com/algolia/algoliasearch-rails) for details.
